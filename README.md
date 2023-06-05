@@ -1,2 +1,2 @@
-# -Kanban_Board
+# Kanban_Board
 This is  Kanban Board project
