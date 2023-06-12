@@ -6,3 +6,11 @@
 ._boardContainer_1a4ff_53{
   width: 100%;
 }
+body{
+  overflow: hidden;
+  cursor: pointer;
+ opacity: 35px;
+ z-index: -1;
+ max-zoom: 200px;
+ background-color: blue;
+}

@@ -12,9 +12,12 @@ import { BsCircleHalf, BsTrello } from "react-icons/bs";
 import { CgMenuGridR } from "react-icons/cg";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import {BsFillKanbanFill} from 'react-icons/bs'
+import {Link} from 'react-router-dom'
 import { useRecoilState } from "recoil";
 import { darkMode } from "../../recoil/atoms/Atoms";
 import * as React from 'react';
+import {BsBellFill} from 'react-icons/bs'
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -125,13 +128,13 @@ export default function Navbar() {
       <AppBar position="static" sx={{ padding: 0 }}>
         <Toolbar
           sx={{
-            backgroundColor: "#424242",
+            backgroundColor: "blue",
             padding: 0,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             minHeight: {
-              xs: "1rem",
+              xs: "0.5rem",
               sm: "1rem",
             },
           }}
@@ -142,16 +145,18 @@ export default function Navbar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <CgMenuGridR />
+      {/*       <CgMenuGridR /> */}
           </IconButton>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: "none", sm: "block" }, fontWeight: "bold" }}
+            sx={{ display: { xs: "none", sm: "block" }, fontWeight: "600" }}
+
           >
-            <BsTrello style={{ marginRight: "0.5rem", marginTop: "0.5rem" }} />
-            Kanban
+            <BsFillKanbanFill style={{ marginRight: "0.5rem", marginBottom:"0.1rem"} } />
+         
+            <Link to="https://kanbantool.com/kanban-board"style={{color:"white",textDecoration:"none"}}>KanBan</Link>
           </Typography>
          {/* this is my */}
   <div>
@@ -161,14 +166,15 @@ export default function Navbar() {
         color="inherit"
         endIcon={<KeyboardArrowDownIcon />}
         sx={{
-          textTransform: 'none',
-          marginLeft:"10px"
+          textTransform: 'uppercase',
+          marginLeft:"10px",
+          fontWeight:"bold"
         }}
       >
         Workspaces
 
       </Button>
-      <Menu /* Display all collaborators names */
+       <Menu /* Display all collaborators names */
               id="basic-menu"
               anchorEl={anchorE2}
               open={open2}
@@ -177,11 +183,11 @@ export default function Navbar() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose2}>Action1</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-            </Menu>
+               <MenuItem onClick={handleClose2}>suraj Kumar sahoo</MenuItem>
+              <MenuItem onClick={handleClose2}>Riya singh</MenuItem>
+              <MenuItem onClick={handleClose2}>Asish mahale</MenuItem>
+              <MenuItem onClick={handleClose2}>Ansul mishra</MenuItem>
+            </Menu>  
     </div>
 
 
@@ -192,8 +198,9 @@ export default function Navbar() {
         color="inherit"
         endIcon={<KeyboardArrowDownIcon />}
         sx={{
-          textTransform: 'none',
-          marginLeft:"10px"
+          textTransform: 'uppercase',
+          marginLeft:"10px",
+          fontWeight:"bold"
         }}
       >
         Recent
@@ -208,10 +215,10 @@ export default function Navbar() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose2}>Action1</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
+              <MenuItem onClick={handleClose2}>suraj kumar sahoo</MenuItem>
+              <MenuItem onClick={handleClose2}>riya singh</MenuItem>
+              <MenuItem onClick={handleClose2}>Asish mahale</MenuItem>
+              <MenuItem onClick={handleClose2}>Ansul mishra</MenuItem>
             </Menu>
     </div>
 
@@ -222,8 +229,9 @@ export default function Navbar() {
         color="inherit"
         endIcon={<KeyboardArrowDownIcon />}
         sx={{
-          textTransform: 'none',
-          marginLeft:"10px"
+          textTransform: 'uppercase',
+          marginLeft:"10px",
+          fontWeight:"bold"
         }}
       >
         Starred
@@ -238,10 +246,10 @@ export default function Navbar() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose2}>Action1</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
+              <MenuItem onClick={handleClose2}>suraj kumar sahoo</MenuItem>
+              <MenuItem onClick={handleClose2}>riya singh</MenuItem>
+              <MenuItem onClick={handleClose2}>Asish mahale</MenuItem>
+              <MenuItem onClick={handleClose2}>Ansul mishra</MenuItem>
             </Menu>
     </div>
 
@@ -252,8 +260,9 @@ export default function Navbar() {
         color="inherit"
         endIcon={<KeyboardArrowDownIcon />}
         sx={{
-          textTransform: 'none',
-          marginLeft:"10px"
+          textTransform: 'uppercase',
+          marginLeft:"10px",
+          fontWeight:"bold"
         }}
       >
       Templates
@@ -268,17 +277,20 @@ export default function Navbar() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose2}>Action1</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
-              <MenuItem onClick={handleClose2}>Action</MenuItem>
+              <MenuItem onClick={handleClose2}>suraj kumar sahoo</MenuItem>
+              <MenuItem onClick={handleClose2}>riya singh</MenuItem>
+              <MenuItem onClick={handleClose2}>Ashish mahale</MenuItem>
+              <MenuItem onClick={handleClose2}>Ansul mishra</MenuItem>
             </Menu>
     </div>
 
     <div class="dropdown">
 
     <Button  type="button" data-bs-toggle="dropdown" 
-    sx={{color:"white",backgroundColor:"grey", textTransform: 'none',
+    sx={{color:"white",backgroundColor:"pink", textTransform: 'uppercase',
+    fontWeight:"bold",
+    fontFamily:"cursive",
+    borderRadius:"12px"
   }}
     >
     Create
@@ -309,7 +321,7 @@ export default function Navbar() {
         <SearchIcon />
       </InputAdornment>
     ),
-    style: { color: 'white' , height:"40px", backgroundColor:"rgb(112,112,112)"},
+    style: { color: 'white' , height:"40px", backgroundColor:"pink", justifyContent:"center", focus:"center",},
     placeholder: "Search",
     sx: {
       '&::placeholder': {
@@ -326,14 +338,14 @@ export default function Navbar() {
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
-              href="https://trello.com/"
+              href="https://kanbantool.com/kanban-board"
               target="_blank"
               sx={{  
-                transform: 'rotate(50deg)',
+                transform: 'rotate(1deg)',
               }}
             >
               <Badge badgeContent={0} color="error">
-              <NotificationsNoneIcon/>
+             <BsBellFill style={{color:"white",fontSize:"1.5rem"}}/>
             
               </Badge>
             </IconButton>
@@ -349,7 +361,7 @@ export default function Navbar() {
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
-              href="https://trello.com/"
+              href="https://kanbantool.com/kanban-board"
               target="_blank"
             >
               <Badge badgeContent={0} color="error">
@@ -376,7 +388,7 @@ export default function Navbar() {
               aria-haspopup="true"
               color="inherit"
             >
-              <Avatar sx={{ backgrountColor: "Orange" ,height:"35px",
+              <Avatar sx={{ backgrountColor: "blue" ,height:"35px",
              width:"35px"
             }}>RS</Avatar>
 

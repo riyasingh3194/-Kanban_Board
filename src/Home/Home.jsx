@@ -2,18 +2,14 @@ import React from "react";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Navbar from "../Containers/navbar/Navigation";
 import Board from "../Containers/board/Board";
-import Sidebar from "../Containers/sidebar/Sidebar";
+
 import style from "../Home/Home.module.css";
-import first from "../utils/pexels-fathi-vee-1020478.jpg";
-import clone from "../utils/clone.jpg";
-import MImage from "../utils/MImage.jpg";
-import gexupdate from "../utils/gxupdate.jpg";
-import Webb from "../utils/Webb.jpg";
+import sf2 from "../utils/sf2.jpg";
 
 const Home = () => {
   const [collapsed, setCollapsed] = React.useState(false);
   const [Theme, setTheme] = React.useState(0);
-  const backgroundImages = [first, clone, MImage, gexupdate, Webb];
+  const backgroundImages = [sf2];
   const handleCollapse = () => {
     setCollapsed(!collapsed);
   };
