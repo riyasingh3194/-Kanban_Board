@@ -6,6 +6,8 @@ import CardItem from "../../recoil/atoms/Atoms";
 import { useRecoilState } from "recoil";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { v4 as uuidv4 } from "uuid";
+
+
 function Board() {
   const [cardAtom, setCardAtom] = useRecoilState(CardItem); // This is recoil state to get values and setter function for read and update the list
   const [listTitle, setListTitle] = React.useState(""); // This is the state from set the title of the list as well as we can change also.

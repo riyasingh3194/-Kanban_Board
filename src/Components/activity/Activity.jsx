@@ -35,7 +35,8 @@ function Activity() {
     const eleObj = { ...taskArr[index] };
     comments.unshift({
       activity: value,
-      time:
+      time: 
+
         new Date(Date.now()).getHours() +
         ":" +
         new Date(Date.now()).getMinutes(),
@@ -131,7 +132,8 @@ function Activity() {
                   >
                     <span className={style.activityBox}>
                       <p style={{ fontSize: "18px" }}>{ele.activity}</p>
-                      <span className={style.time}>Time:{ele.time}</span>
+                       <span className={style.time}>Time:{ele.time}</span>
+
                       {/* <span className={style.time}>Time:{new Date(Date.now()).getHours() + ':' + new Date(Date.now()).getMinutes()}</span> */}
                     </span>
                   </span>

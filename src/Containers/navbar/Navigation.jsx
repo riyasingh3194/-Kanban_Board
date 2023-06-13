@@ -5,11 +5,9 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { BsCircleHalf, BsTrello } from "react-icons/bs";
-import { CgMenuGridR } from "react-icons/cg";
+import { BsCircleHalf} from "react-icons/bs";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import {BsFillKanbanFill} from 'react-icons/bs'
@@ -21,23 +19,11 @@ import {BsBellFill} from 'react-icons/bs'
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import EditIcon from '@mui/icons-material/Edit';
-import Divider from '@mui/material/Divider';
-import ArchiveIcon from '@mui/icons-material/Archive';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Avatar from '@mui/material/Avatar';
-
-
-
-
-
 
 
 const StyledMenu = styled((props) => (
@@ -105,7 +91,6 @@ export default function Navbar() {
   };
 
 
- 
   const [anchorE2, setAnchorE2] = React.useState(null);
   const open2 = Boolean(anchorE2);
 
@@ -117,11 +102,6 @@ export default function Navbar() {
     setAnchorE2(null);
   };
 
-
-
-
-
- 
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -145,7 +125,6 @@ export default function Navbar() {
             color="inherit"
             aria-label="open drawer"
           >
-      {/*       <CgMenuGridR /> */}
           </IconButton>
           <Typography
             variant="h6"
@@ -158,7 +137,7 @@ export default function Navbar() {
          
             <Link to="https://kanbantool.com/kanban-board"style={{color:"white",textDecoration:"none"}}>KanBan</Link>
           </Typography>
-         {/* this is my */}
+        
   <div>
       <Button
         id="demo-customized-button"
@@ -316,13 +295,13 @@ export default function Navbar() {
   margin="normal"
   InputProps={{
     startAdornment: (
-      <InputAdornment position="start" sx={{ color: 'white',
+      <InputAdornment position="start" sx={{ color: 'white', borderColor:"white"
     }}>
         <SearchIcon />
       </InputAdornment>
     ),
-    style: { color: 'white' , height:"40px", backgroundColor:"pink", justifyContent:"center", focus:"center",},
-    placeholder: "Search",
+    style: { color: 'Black' , height:"40px",justifyContent:"center", focus:"center", backgroundColor:"pink"},
+    placeholder: "Search", border:"white",
     sx: {
       '&::placeholder': {
         color: 'white',  
@@ -349,13 +328,6 @@ export default function Navbar() {
             
               </Badge>
             </IconButton>
-     
-
-
-
-
-
-
 
             <IconButton                                                 // this button will redirect to trello website
               size="large"
@@ -388,9 +360,9 @@ export default function Navbar() {
               aria-haspopup="true"
               color="inherit"
             >
-              <Avatar sx={{ backgrountColor: "blue" ,height:"35px",
+              <Avatar sx={{height:"35px",
              width:"35px"
-            }}>RS</Avatar>
+            }}>AM</Avatar>
 
             </IconButton>
             <Menu /* Display all collaborators names */
